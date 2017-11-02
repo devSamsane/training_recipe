@@ -2,6 +2,10 @@
   <div fxFlex.xs="80">
     <app-shopping-list-edit></app-shopping-list-edit>
     <hr>
-    <p>The list</p>
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let ingredient of ingredients" class="list-border">{{ ingredient.name }} ({{ ingredient.count }})</a>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+
   </div>
 </div>

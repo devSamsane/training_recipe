@@ -1,3 +1,28 @@
-<p>
-  shopping-list-edit works!
-</p>
+<div fxLayout="row">
+  <div fxFlex.xs="100">
+    <form>
+      <div fxLayout="row">
+          <div fxFlex.sm="40">
+              <mat-form-field>
+                <label for="name">Name</label>
+                <input matInput type="text"id="name">
+              </mat-form-field>
+            </div>
+            <div fxFlex.sm="20">
+              <mat-form-field>
+                <label for="count">Count</label>
+                <input matInput type="number" id="count">
+              </mat-form-field>
+            </div>
+            <div fxFlex.sm="40"></div>
+      </div>
+      <div fxLayout="row">
+        <div fxFlex.xs="100" class="button-row-group">
+          <button mat-raised-button color="accent" type="submit">Add</button>
+          <button mat-raised-button color="warn" type="button">Delete</button>
+          <button mat-raised-button type="button">Clear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

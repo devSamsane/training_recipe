@@ -1,8 +1,14 @@
 <div fxLayout="row">
   <div fxFlex.md="40">
-    <app-recipe-list></app-recipe-list>
+    <app-recipe-list (selectedItemRecipe)="selectedRecipe = $event"></app-recipe-list>
   </div>
   <div fxFlex.md="60" style="padding-left: 10px;">
-    <app-recipe-detail></app-recipe-detail>
+    <app-recipe-detail
+      *ngIf="selectedRecipe; else infoText"
+      [recipe]="selectedRecipe"
+    ></app-recipe-detail>
+    <ng-template #infoText>
+      <p>Please select a recipe</p>
+    </ng-template>
   </div>
 </div>

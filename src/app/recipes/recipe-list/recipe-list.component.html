@@ -5,15 +5,11 @@
 </div>
 <div fxLayout="row" style="padding-top: 20px;">
   <div fxFlex.xs="100">
-    <mat-nav-list *ngFor="let recipe of recipes">
-      <mat-list-item class="list-border">
-        <a matLine href="#"></a>
-        <h3 matLine class="subheading-2">{{ recipe.name }}</h3>
-        <p matLine class="body-1">{{ recipe.description }}</p>
-        <img [src]="recipe.imageUrl" alt="{{ recipe.name }}" style="max-height: 80px; max-width: auto;">
-      </mat-list-item>
-    </mat-nav-list>
-    <app-recipe-item></app-recipe-item>
+    <app-recipe-item
+      *ngFor="let recipeItem of recipes"
+      [recipe]="recipeItem"
+      (recipeSelected)="onRecipeSelected(recipeItem)"
+      ></app-recipe-item>
   </div>
 </div>
 

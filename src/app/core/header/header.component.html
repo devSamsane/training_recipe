@@ -1,8 +1,8 @@
 <mat-toolbar color="primary">
   <div fxFlex="80" fxLayoutAlign="start">
     <a href="#" mat-button><h3>Recipe Book</h3></a>
-    <a href="#" mat-button>Recipes</a>
-    <a href="#" mat-button>Shopping List</a>
+    <a href="#" mat-button (click)="onSelect('recipe')">Recipes</a>
+    <a href="#" mat-button (click)="onSelect('shopping-list')">Shopping List</a>
   </div>
   <div fxFlex="20" fxLayoutAlign="end">
     <button mat-button [matMenuTriggerFor]="menu">

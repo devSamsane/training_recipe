@@ -3,10 +3,10 @@
 @include mat-core();
 
 // Define custom theme
-$app-primary: mat-palette($mat-deep-purple, 500);
+$app-primary: mat-palette($mat-deep-orange, 500);
 $app-accent: mat-palette($mat-lime, 500);
 $app-warn: mat-palette($mat-pink, 500);
-$app-background: mat-palette($mat-deep-purple, 50);
+$app-background: mat-palette($mat-deep-orange, 50);
 
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 

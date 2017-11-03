@@ -9,7 +9,7 @@
   </div>
 </div>
 <div fxLayout="row">
-  <div fxFlex.xs="100">
+  <div fxFlex.xs="100" fxLayoutAlign="end">
     <button mat-raised-button [matMenuTriggerFor]="menu" color="primary">
       Manage Recipe
       <mat-icon>keyboard_arrow_down</mat-icon>
@@ -21,9 +21,9 @@
     </mat-menu>
   </div>
 </div>
-<div fxLayout="row" style="padding-top: 10px;">
+<div fxLayout="row" style="padding-left: 16px;">
   <div fxFlex.xs="100">
-    <p>{{ recipe.description }}</p>
+    <p class="body-1" style="font-family: 'Open Sans', 'Helvetica Neue', 'sans-serif'">{{ recipe.description }}</p>
   </div>
 </div>
 <div fxLayout="row">

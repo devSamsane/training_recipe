@@ -9,12 +9,14 @@ import { Ingredient } from '../../shared/models/ingredient.model';
   templateUrl: './recipe-detail.component.html',
   styleUrls: ['./recipe-detail.component.css']
 })
+
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe: Recipe;
 
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
+
   }
 
   onAddToShoppingList() {

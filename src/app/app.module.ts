@@ -16,6 +16,7 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListEditComponent } from './shopping/shopping-list-edit/shopping-list-edit.component';
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { ShoppingListService } from './shopping/shopping-list.service';
+import { AppRoutingModule } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ShoppingListService } from './shopping/shopping-list.service';
     HttpClientModule,
     MaterialModule,
     FlexLayoutModule,
+    AppRoutingModule
 
   ],
   providers: [

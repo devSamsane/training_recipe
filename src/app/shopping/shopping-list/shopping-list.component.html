@@ -1,6 +1,6 @@
 <div fxLayout="row">
   <div fxFlex.xs="80">
-    <app-shopping-list-edit (ingredientAdded)="onIngredientAdded($event)"></app-shopping-list-edit>
+    <app-shopping-list-edit></app-shopping-list-edit>
     <hr>
     <mat-nav-list>
       <a mat-list-item *ngFor="let ingredient of ingredients" class="list-border">{{ ingredient.name }} ({{ ingredient.count }})</a>

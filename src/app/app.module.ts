@@ -1,3 +1,4 @@
+import { RecipeService } from './recipes/recipe.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -14,6 +15,7 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListEditComponent } from './shopping/shopping-list-edit/shopping-list-edit.component';
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
+import { ShoppingListService } from './shopping/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.co
     FlexLayoutModule,
 
   ],
-  providers: [],
+  providers: [
+    ShoppingListService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

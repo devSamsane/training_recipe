@@ -15,19 +15,21 @@
       <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
     <mat-menu #menu="matMenu" [overlapTrigger]="false" xPosition="after">
-      <button mat-menu-item>Add To Shopping List</button>
+      <button mat-menu-item (click)="onAddToShoppingList()">Add To Shopping List</button>
       <button mat-menu-item>Edit Recipe</button>
       <button mat-menu-item>Delete Recipe</button>
     </mat-menu>
   </div>
 </div>
-<div fxLayout="row">
+<div fxLayout="row" style="padding-top: 10px;">
   <div fxFlex.xs="100">
-    {{ recipe.description }}
+    <p>{{ recipe.description }}</p>
   </div>
 </div>
 <div fxLayout="row">
   <div fxFlex.xs="100">
-    Ingredients
+    <mat-list>
+      <mat-list-item *ngFor="let ingredient of recipe.ingredients">{{ ingredient.name }} - {{ ingredient.count }}</mat-list-item>
+    </mat-list>
   </div>
 </div>

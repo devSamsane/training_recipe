@@ -22,7 +22,7 @@ export class ShoppingListEditComponent implements OnInit {
       this.countRef.nativeElement.value
     );
 
-    this.shoppingListService.addIngredients(newIngredient);
+    this.shoppingListService.addIngredient(newIngredient);
   }
 
 }
